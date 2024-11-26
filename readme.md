@@ -2,12 +2,6 @@
 
   <h1 align="center">Python Django Blog Website</h1>
 
-
-Una aplicación de blog en Django contiene todas las características de un sitio de blog, como iniciar sesión/registrarse en el sistema, agregar publicaciones de blog con título, descripción e imagen y editar o eliminar la publicación de blog.
-
-
-  <a href="https://blogs-n2mq.onrender.com/"><strong>➥ Live Demo</strong></a>
-
 </div>
 
 <br />
