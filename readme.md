@@ -1,7 +1,5 @@
 <div align="center">
-
   <h1 align="center">Python Django Blog Website</h1>
-
 </div>
 
 <br />
