@@ -19,6 +19,9 @@ class Post(models.Model):
     def __str__(self):
         return str( self.postname)
     
+    class Meta:
+        db_table = 'tb_post'
+    
     
 class Comment(models.Model):
     content = models.CharField(max_length=200)
@@ -27,6 +30,9 @@ class Comment(models.Model):
     user = models.ForeignKey(User,on_delete=models.CASCADE)
     def __str__(self):
         return  f"{self.id}.{self.content[:20]}..."
+    
+    class Meta:
+        db_table = 'tb_comentario'
     
     
 
@@ -38,3 +44,6 @@ class Contact(models.Model):
 
     def __str__(self):
         return self.name
+    
+    class Meta:
+        db_table = 'tb_contacto'
