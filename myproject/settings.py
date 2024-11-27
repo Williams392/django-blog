@@ -26,7 +26,8 @@ SECRET_KEY = "django-insecure-s0eg9q5^i%wy4n5m78yvbpwkb3j3u)w8nx=pr&c6+ag8ltvs5t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+# IP de maquina virutal vm-django-final-1, ip externa:
+ALLOWED_HOSTS = ['34.176.204.4']
 
 
 # Application definition
