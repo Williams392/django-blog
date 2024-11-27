@@ -125,6 +125,8 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 STATICFILES_DIRS = [STATIC_DIR]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') # para django y instalar -> python manage.py collectstatic
+
 MEDIA_URL = "media/"
 MEDIA_ROOT = MEDIA_DIR
 # Default primary key field type
