@@ -27,7 +27,7 @@ SECRET_KEY = "django-insecure-s0eg9q5^i%wy4n5m78yvbpwkb3j3u)w8nx=pr&c6+ag8ltvs5t
 DEBUG = True
 
 # IP de maquina virutal vm-django-final-1, ip externa:
-ALLOWED_HOSTS = ['*','34.176.204.4']
+ALLOWED_HOSTS = ['*','34.176.191.164']
 
 
 # Application definition
