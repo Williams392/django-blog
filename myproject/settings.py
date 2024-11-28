@@ -27,7 +27,7 @@ SECRET_KEY = "django-insecure-s0eg9q5^i%wy4n5m78yvbpwkb3j3u)w8nx=pr&c6+ag8ltvs5t
 DEBUG = True
 
 # IP de maquina virutal vm-django-final-1, ip externa:
-ALLOWED_HOSTS = ['34.176.204.4']
+ALLOWED_HOSTS = ['*','34.176.204.4']
 
 
 # Application definition
@@ -76,23 +76,23 @@ WSGI_APPLICATION = "myproject.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.sqlite3",
-#         "NAME": BASE_DIR / "db.sqlite3",
-#     }
-# }
-
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'bd_blog',
-        'USER': 'root',
-        'PASSWORD': 'admin123456',
-        'HOST': '34.176.101.152',
-        'PORT': '3306',
-    },
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
+    }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'bd_blog',
+#         'USER': 'root',
+#         'PASSWORD': 'admin123456',
+#         'HOST': '34.176.101.152',
+#         'PORT': '3306',
+#     },
+# }
 
 
 # Password validation
@@ -123,11 +123,23 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = "static/"
+STATIC_URL = "/static/"
 STATICFILES_DIRS = [STATIC_DIR]
-MEDIA_URL = "media/"
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles/') # para django y instalar -> python manage.py collectstatic
+
+MEDIA_URL = "/media/"
 MEDIA_ROOT = MEDIA_DIR
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+'''
+El comando python manage.py collectstatic en Django se utiliza 
+para recopilar todos los archivos estáticos de tu proyecto 
+(como imágenes, archivos CSS y JavaScript) en un solo directorio.
+Esto es especialmente útil cuando estás preparando tu aplicación 
+para el despliegue en un servidor de producción.
+'''
+
